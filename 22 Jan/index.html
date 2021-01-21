@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+            color: cornflowerblue;
+            font-family: verdana;
+            font-size: 100%
+        }
+        
+        p {
+            color: crimson;
+            font-family: courier;
+            font-size: 100%;
+        }
+        
+        p {
+            border: 2px solid;
+            padding: 30px;
+        }
+        
+        body {
+            margin: 50px;
+        }
+        
+        a:link {
+            color: seagreen;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        
+        a:link,
+        a:visited {
+            background-color: teal;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-flex;
+        }
+        
+        a:hover,
+        a:active {
+            background-color: red;
+        }
+        
+        body {
+            background-image: url("");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 15px;
+        }
+        
+        th {
+            text-align: center;
+        }
+        
+        table {
+            border-spacing: 5px;
+        }
+        
+        #t01 {
+            width: 100%;
+            background-color: yellowgreen;
+        }
+        
+        #t01 tr:nth-child(even) {
+            background-color: yellow;
+        }
+        
+        #t01 tr:nth-child(odd) {
+            background-color: yellowgreen;
+        }
+        
+        ul {
+            list-style-type: disc;
+            margin: 1px;
+            padding: 0;
+            overflow: hidden;
+            background-color: aqua;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: azure;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            background-color: chartreuse;
+        }
+        
+        #mit {
+            color: white;
+        }
+        
+        #mit1 {
+            padding: 25px;
+            background-color: white;
+            border: 0px;
+        }
+        
+        .city {
+            background-color: tomato;
+            color: white;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+        }
+        
+        .city p {
+            color: white;
+        }
+        
+        .note {
+            font-size: 120%;
+            color: darkblue;
+        }
+        
+        #dm2 p {
+            border: 0px;
+        }
+        
+        #mo p {
+            color: black;
+            border: 0px;
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var x = document.getElementsByClassName("city1");
+            for (var i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+
+        }
+
+        function myFunction1() {
+            document.getElementById("dm").style.fontSize = "25px";
+            document.getElementById("dm").style.color = "red";
+            document.getElementById("dm").style.background = "yellow"
+        }
+
+        function light(sw) {
+            if (sw == 0) {
+                pic = "Image/bulboff.gif"
+            } else {
+                pic = "Image/bulbon.gif"
+            }
+            document.getElementById("dm1").src = pic;
+        }
+    </script>
+    <title>Mitul's Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+    <!--Giving viewport so that ei ta adjust kore size-->
+    <meta name="keywords" content "HTML,CSS,Javascript><!--Giving info for search engine-->
+    
+
+
+</head>
+
+<body>
+    <ul>
+        <li><a href="#home ">Home</a></li>
+        <li><a href="#news ">News</a></li>
+        <li><a href="#contact ">Contact</a></li>
+        <li><a href="#about ">About</a></li>
+    </ul>
+
+    <p id="home ">Home</p>
+    <h1 id="C4 ">This is H1</h1>
+    <p>This is paragraph tag</p>
+    <div style="background-color: black;color:white;padding:20px; ">
+        <h2>London</h2>
+        <p id="mit ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, ducimus dolore! Numquam magni ad at molestiae vero commodi iusto est voluptates adipisci? Ab ipsam reprehenderit cupiditate voluptatem amet esse. Amet?</p>
+
+    </div>
+    <div id="dm2 ">
+        <img id="dm1 " src="Image/bulboff.gif " width="100 " height="180 ">
+        <p>
+            <button type="button " onclick=light(1)>Light On</button>
+            <button type="button " onclick="light(0) ">Light Off</button>
+        </p>
+    </div>
+    <div>
+        <p id="dm ">An example to change font color and background</p>
+        <button type="button " onclick="myFunction1() ">Click to change color and font</button>
+    </div>
+
+    <h1>City details</h1>
+    <div class="city ">
+        <h2>London</h2>
+        <p>London is the capital of England</p>
+
+    </div>
+    <div class="city ">
+        <h2>Paris</h2>
+        <p>Paris is the capital of France.</p>
+    </div>
+    <div>
+        <h1>City details to hide</h1>
+
+        <h2 class="city1 ">London</h2>
+        <p>London is the capital of England</p>
+
+
+
+        <h2 class="city1 ">Paris</h2>
+        <p>Paris is the capital of France.</p>
+    </div>
+    <button onclick="myFunction() ">Hide city names</button>
+    <h1>My<span class="note ">Important</span>Heading</h1>
+    <p>This is some<span class="note ">important</span>Text.</p>
+    <iframe src="demo_iframe.html " name="iframe_a " style="border:2px solid red; " title="Iframe Example "></iframe>
+    <p><a href="https://www.w3schools.com/ " target="iframe_a ">LinkedIn</a></p>
+
+    <p id="mit1 ">My mother has<span style="color:cyan;font-weight:bold; ">Blue</span>eyes and my father has <span style="color:darkorange;font-weight:bold; ">Orange</span>eyes</p>
+    <p title="I am tooltip ">This is paragraph 2</p>
+    <p title='John "Karim " Mokhles'>Paragraph 3</p>
+    <p style="font-size: 60px; ">Hi there</p>
+    <h2>New paragraph</h2>
+    <p>This is some text</p>
+    <hr>
+    <h3>Again new paragraph</h3>
+    <p>Some other text</p>
+    <hr>
+    <h4>H4</h4>
+    <p>Other h4<br>Using br tag</p>
+    <pre id="news ">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id eveniet nobis consectetur asperiores aut, ipsum, molestiae iusto, quis velit modi labore. Repudiandae consequatur quibusdam laboriosam quia dolorum fugit, non exercitationem?
+            </pre>
+    <p style="background-color: aqua; ">Using Background color</p>
+    <p style="color:coral ">Using color orange</p>
+    <p style="text-align: center; ">Using text-align center</p>
+    <b>Bold text</b>
+    <strong>Strong text</strong>
+    <i>Italic text</i>
+    <em>Emphasized text</em>
+    <mark>Marked Text</mark>
+    <small>Smaller text</small>
+    <del>Deleted text</del>
+    <ins>Inserted text</ins>
+    <sub>Subscript text</sub>
+    <sup>Superscript text</sup>
+
+    <h1>Blockquote from WWF's website</h1>
+    <img src="Image/mitul new.jpeg " alt="Mitul " style="width:500px;height:600px; ">
+    <blockquote cite="https://www.worldwildlife.org/ ">For 50 years,WWF has been protecting the future of nature. The world's leading conservation organization,WWF works in 100 countries and is supported by 1.2million members.
+    </blockquote>
+    <h1>Touch amar right side er tal gach to go to Google.com</h1>
+    <img src="Image/mitul new.jpeg " style="height:600px;width:600px; alt=" Workplace " usemap="#workmap ">
+    <map name="workmap ">
+        <area shape="rect " coords="344,44,270,350 " alt="computer " href="https://www.google.com/ ">
+        
+
+    </map>
+
+    <h1>Short quote</h1>
+    <p>WWF's goal is to:<q>Build a future where people will live in harmonyy.</q></p>
+    <a href="https://www.w3schools.com/ " target="_blank ">Go to w3schools</a>
+    <picture>
+        <source media="(min-width:650px) " srcset="Image/mit.jpg ">
+        <source media="(min-width:465px) " srcset="Image/mitul new.jpeg ">
+        <img src="Image/mitul.jpeg " style="width:100px; ">
+    </picture>
+    <p id="contact ">The
+        <avvr title="World Health Organization ">WHO</avvr>was founded on 1948</p>
+
+    <address>
+            Written by John Doe.<br>
+            Visit us at:<br>
+            Example.com.<br>
+            Box 564,disneyland<br>
+            USA
+    </address>
+
+    <p id="about "><cite>The scream</cite> by Edvad Munch.Pianted in 1893.</p>
+
+    <bdo dir="rtl ">This line right to left</bdo>
+    <!--Comment-->
+    <h1 stle="border:2px solid Tomato; ">Hello World</h1>
+    <h1 style="border:2px solid DodgerBlue; ">Hello World</h1>
+    <h1 style="border:2px solid Violet; ">Hello World</h1>
+    <a href="#C4 ">Jump to body</a><br><br>
+    <a href="https://www.google.com#C5 ">Go to Google</a>
+
+    <table id="t01 ">
+        <caption>Details</caption>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+
+        </tr>
+        <tr>
+            <td>Mitul</td>
+            <td>Shahriyar</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Royena</td>
+            <td>Nayeem</td>
+            <td>94</td>
+        </tr>
+
+    </table>
+    <dl>
+        <dt>Coffee</dt>
+        <dd>Black coffee</dd>
+        <dt>Milk</dt>
+        <dd>White dudu/dd>
+    </dl>
+    <div id="mo">
+        <p>It will display &euro;</p>
+        <p>It will display &copy;</p>
+    </div>
+    <div>
+        <form action="" target="" autocomplete="on" nonvalidate>
+            <fieldset>
+                <legend>Personalia:</legend>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" value="John"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" value="Doe"><br>
+                <input type="submit"><br>
+
+            </fieldset>
+            <select id="dt" size="4" multiple>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option>
+                <option value="XXL">Extra extra large</option>
+            </select>
+            <br>
+            <textarea name="message" rows="10" cols="30" style="width: 200px;height:200px;">The cat was playing in the garden
+            </textarea>
+            <br>
+            <button type="button" onclick="alert('Hello World!')">Click Me!</button><br>
+
+            <form action="/action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                0
+                <input type="range" id="a" name="a" value="50"> 100+
+                <input type="number" id="b" name="b" value="50"> =
+                <output name="x" for="a b"></output>
+                <br><br>
+                <input type="submit">
+
+            </form>
+
+
+
+        </form>
+    </div>
+
+
+
+
+
+    </body>
+
+</html>
